@@ -1,0 +1,62 @@
+{
+  "name": "ex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "webpack -d --mode development",
+    "build:prod": "webpack -p --mode production",
+    "start": "webpack-dev-server --hot --mode development",
+    "test": "jest",
+    "lint": "eslint ./src"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node scripts/commit-lint.js --edit $HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,css,md,ts,tsx}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix --exclude *.css"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@hot-loader/react-dom": "^17.0.0-rc.2",
+    "@types/react": "^16.9.50",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "babel-jest": "^26.3.0",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-react": "^7.21.3",
+    "husky": "^4.3.0",
+    "install": "^0.13.0",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.4.0",
+    "npm": "^6.14.8",
+    "prettier": "^2.1.2",
+    "ts-loader": "^8.0.4",
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.13.0"
+  }
+}
