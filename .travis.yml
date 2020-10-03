@@ -10,5 +10,5 @@ jobs:
       env: TASK=lint
     - name: "Building"
       node_js: "12.14.1"
-      env: TASK=build
+      env: TASK=build:prod
 script: npm run $TASK
