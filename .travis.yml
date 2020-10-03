@@ -1,0 +1,14 @@
+language: node_js
+node_js: "12.14.1"
+jobs:
+  include:
+    - name: "Unit tests"
+      node_js: "12.14.1"
+      env: TASK=test
+    - name: "Linting"
+      node_js: "12.14.1"
+      env: TASK=lint
+    - name: "Building"
+      node_js: "12.14.1"
+      env: TASK=build
+script: npm run $TASK
