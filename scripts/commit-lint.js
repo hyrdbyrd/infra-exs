@@ -4,7 +4,7 @@ const { writeFileSync, readFileSync } = require('fs');
 
 const { execSync } = require('child_process');
 
-const ticketRegexp = /^TICKET-[0-9]+:/;
+const ticketRegexp = /^TICKET-[0-9]+/;
 
 const pathToCommitMessage = process.env.HUSKY_GIT_PARAMS;
 
