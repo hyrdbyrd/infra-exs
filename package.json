@@ -18,12 +18,10 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,css,md,ts,tsx}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "keywords": [],
