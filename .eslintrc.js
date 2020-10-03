@@ -34,6 +34,9 @@ module.exports = {
             'error',
             'unix'
         ],
+        'no-console': [
+            'error'
+        ],
         'quotes': [
             'error',
             'single'

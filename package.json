@@ -17,11 +17,13 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,css,md,ts,tsx}": [
-      "prettier --write"
+    "src/**/*.{js,jsx,css,md,ts,tsx}": [
+      "prettier --write",
+      "git add"
     ],
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix --exclude *.css"
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
     ]
   },
   "keywords": [],
@@ -38,6 +40,7 @@
     "@typescript-eslint/parser": "^4.3.0",
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
+    "chalk": "^4.1.0",
     "eslint": "^7.10.0",
     "eslint-plugin-react": "^7.21.3",
     "husky": "^4.3.0",

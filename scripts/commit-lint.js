@@ -1,3 +1,5 @@
+const chalk = require('chalk');
+
 const { writeFileSync, readFileSync } = require('fs');
 
 const { execSync } = require('child_process');
@@ -22,7 +24,7 @@ if (ticketRegexp.test(branchName)) {
     return;
 }
 
-console.error('В сообщении коммита не указан номер тикета.');
-console.error('Не удалось взять номер тикета из ветки: ветка не содержит номер.');
+console.error(chalk.redBright('В сообщении коммита не указан номер тикета.'))
+console.error(chalk.redBright('Не удалось взять номер тикета из ветки: ветка не содержит номер.'));
 
 process.exit(1);
