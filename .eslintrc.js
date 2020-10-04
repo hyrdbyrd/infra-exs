@@ -38,11 +38,11 @@ module.exports = {
             'error'
         ],
         'quotes': [
-            'error',
+            'warn',
             'single'
         ],
         'semi': [
-            'error',
+            'warn',
             'always'
         ]
     }

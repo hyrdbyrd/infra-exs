@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-export const App = React.memo(() => {
-    return <div />;
-});
+export const App = React.memo(() => <div />);
 
 App.displayName = 'App';
